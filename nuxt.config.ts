@@ -31,4 +31,7 @@ export default defineNuxtConfig({
       // 如果需要在客户端使用某些配置，可以放在这里
     },
   },
+  nitro: {
+    preset: 'netlify'
+  }
 });
