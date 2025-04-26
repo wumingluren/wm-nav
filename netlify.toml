@@ -1,7 +1,6 @@
 [build]
   command = "npm run build"
   publish = ".output/public"
-  edge_functions = "netlify/edge-functions"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -12,4 +11,5 @@
   status = 200
 
 [functions]
+  directory = ".output/server"
   node_bundler = "esbuild"
