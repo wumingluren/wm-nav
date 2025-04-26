@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".nuxt/dist/client"
+  publish = ".output/public"
   edge_functions = "netlify/edge-functions"
 
 [build.environment]

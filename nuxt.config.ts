@@ -32,6 +32,10 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: 'netlify'
-  }
+    preset: 'netlify',
+    output: {
+      dir: '.output', // 确保输出目录正确
+      publicDir: '.output/public', // 确保公共目录正确
+    },
+  },
 });
