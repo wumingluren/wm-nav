@@ -32,10 +32,20 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: 'netlify',
+    preset: 'netlify', // 设置部署平台为 Netlify
     output: {
-      dir: '.output', // 确保输出目录正确
-      publicDir: '.output/public', // 确保公共目录正确
+      dir: '.output', // 指定构建输出的根目录
+      publicDir: '.output/public', // 指定静态资源的输出目录
+    },
+    serverAssets: [
+      {
+        // 配置服务器端资源
+        baseName: 'server', // 资源的基础名称
+        dir: 'server', // 资源目录
+      },
+    ],
+    experimental: {
+      asyncContext: true, // 启用实验性的异步上下文功能
     },
   },
 });
