@@ -190,6 +190,18 @@ docker build -t wm-nav .
 docker run -p 3000:3000 -e FEISHU_APP_ID=xxx -e FEISHU_APP_SECRET=xxx -e FEISHU_BASE_ID=xxx -e FEISHU_TABLE_ID=xxx wm-nav
 ```
 
+### 使用 Netlify 部署
+
+需要在 Netlify 上创建一个新站点，选择 GitHub 或 GitLab 作为部署来源。
+
+在 Netlify 站点设置中，添加以下环境变量：
+```bash
+FEISHU_APP_ID=your_app_id
+FEISHU_APP_SECRET=your_app_secret
+FEISHU_BASE_ID=your_base_id
+FEISHU_TABLE_ID=your_table_id
+```
+
 ## 注意事项
 
 - 确保部署环境中正确设置了所有环境变量

@@ -13,6 +13,9 @@
     <footer class="bg-white border-t sticky bottom-0 z-10">
       <div class="container-custom py-4 text-center text-gray-500 text-sm">
         <p>© {{ new Date().getFullYear() }} 無名导航 - 一个简单高效的网站导航</p>
+        <p class="mt-1">
+          <a href="https://github.com/wumingluren/wm-nav" target="_blank" class="hover:text-blue-600">GitHub 开源地址</a>
+        </p>
       </div>
     </footer>
   </div>
