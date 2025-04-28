@@ -4170,7 +4170,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "ea782285-89e8-4774-b153-9ffdb61419e5",
+    "buildId": "a14f6d9c-c1fd-4702-a181-ca76b9880f2a",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4212,7 +4212,7 @@ const _inlineRuntimeConfig = {
     "baseURL": "/_ipx",
     "alias": {},
     "fs": {
-      "dir": "../../../dist"
+      "dir": "../../../.output/public"
     },
     "http": {
       "domains": []
