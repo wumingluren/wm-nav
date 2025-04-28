@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, computed, watch } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import 'floating-vue/dist/style.css';
 
 // 定义网站类型接口
@@ -25,19 +25,6 @@ onMounted(() => {
   if (query) {
     searchQuery.value = query;
     performSearch();
-  }
-});
-
-// 监听搜索关键词变化
-watch(searchQuery, (newValue, oldValue) => {
-  if (newValue !== oldValue) {
-    // 更新URL
-    router.replace({ query: { q: newValue || undefined } });
-    if (newValue) {
-      performSearch();
-    } else {
-      searchResults.value = [];
-    }
   }
 });
 
@@ -69,6 +56,14 @@ const performSearch = async () => {
 const goHome = () => {
   router.push('/');
 };
+
+// 处理搜索表单提交
+const handleSearch = () => {
+  // 更新URL参数但不触发导航
+  router.replace({ query: { q: searchQuery.value || undefined } });
+  // 执行搜索
+  performSearch();
+};
 </script>
 
 <template>
@@ -83,7 +78,7 @@ const goHome = () => {
         </div>
 
         <!-- 搜索区域 -->
-        <form @submit.prevent="performSearch" class="relative">
+        <form @submit.prevent="handleSearch" class="relative">
           <input
             v-model="searchQuery"
             type="text"
